@@ -6,7 +6,7 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 11:38:28 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/12 17:04:25 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/12 17:28:45 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	nbr_len(long nbr)
 	}
 	return (len);
 }
+
 char	*ft_itoa(int n)
 {
 	int		len;

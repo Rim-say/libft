@@ -6,7 +6,7 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 14:09:02 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/12 13:19:46 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/12 17:18:57 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void	ft_putchar_fd(char c, int fd);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 #endif
