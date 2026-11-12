@@ -6,22 +6,11 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 11:38:28 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/12 12:51:35 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/12 17:04:25 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strcat(char *dest, char src)
-{
-	int	j;
-
-	j = 0;
-	while (dest[j] != '\0')
-		j++;
-	dest[j] = src;
-	return (dest);
-}
 
 int	nbr_len(long nbr)
 {
@@ -42,30 +31,33 @@ int	nbr_len(long nbr)
 }
 char	*ft_itoa(int n)
 {
-	int len;
-	long nb;
-	char *arr;
+	int		len;
+	int		i;
+	long	nb;
+	char	*arr;
 
+	i = 0;
 	nb = (long)n;
 	len = nbr_len(nb);
-	arr = malloc(sizeof(char) * len + 1);
+	arr = malloc(sizeof(char) * (len + 1));
+	if (!arr)
+		return (NULL);
+	arr[len] = '\0';
 	if (nb < 0)
 	{
-		arr = ft_strcat(arr, '-');
+		arr[0] = '-';
 		nb = (-1) * nb;
 	}
-	else if (nb < 10)
-		arr = ft_strcat(arr, nb + '0');
-	else
+	while (nb > 0)
 	{
-		ft_itoa(n / 10);
-		arr = ft_strcat(arr, nb % 10 + '0');
+		arr[len--] = (nb % 10) + '0';
+		nb = nb / 10;
 	}
 	return (arr);
 }
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-	printf("%s", ft_itoa(34));
-}
+// int	main(void)
+// {
+// 	printf("%s", ft_itoa(3446781));
+// }

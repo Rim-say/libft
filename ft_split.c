@@ -6,7 +6,7 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 16:48:01 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/12 11:45:51 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/12 16:16:12 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	**ft_split(char const *s, char c)
 		while (s[j] != c && s[j])
 			j++;
 		if (start < j)
-			arr[i++] = copy_word(*arr, start, j);
+			arr[i++] = copy_word((char *)s, start, j);
 	}
 	arr[i] = NULL;
 	return (arr);
@@ -87,5 +87,5 @@ char	**ft_split(char const *s, char c)
 // 	char **arr;
 // 	arr = ft_split(str, c);
 // 	for(int i = 0; i < 3; i++)
-// 		printf("%s\n", arr[i]);
+// 		printf("%s", arr[i]);
 // }
