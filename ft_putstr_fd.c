@@ -1,11 +1,25 @@
-void    ft_putstr_fd(char *s, int fd)
-{
-    int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/12 11:37:07 by ral-saye          #+#    #+#             */
+/*   Updated: 2026/11/12 11:38:04 by ral-saye         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while (s[i])
-    {
-        write(fd, &s[i], 1);
-        i++;
-    }
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }

@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/12 11:30:57 by ral-saye          #+#    #+#             */
+/*   Updated: 2026/11/12 11:31:05 by ral-saye         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    ft_putstr_fd(s, fd);
-    ft_putstr_fd("\n", fd);
+	ft_putstr_fd(s, fd);
+	ft_putstr_fd("\n", fd);
 }

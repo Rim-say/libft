@@ -1,25 +1,37 @@
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/11 09:32:06 by ral-saye          #+#    #+#             */
+/*   Updated: 2026/11/11 09:57:29 by ral-saye         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_strrchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
-    int i;
-    char *s1;
-    int last;
+	int		i;
+	char	*s1;
+	int		last;
 
-    i = 0;
-    last = -1;
-    s1 = (char *)s;
-    while (s[i])
-    {
-        if (s[i] == c)
-            last = i;
-        i++;
-    }
-    if (c == '\0')
-        return (&s1[i]);
-    if (last != -1)
-        return (&s1[last]);
-    return NULL;
+	i = 0;
+	last = -1;
+	s1 = (char *)s;
+	while (s[i])
+	{
+		if (s[i] == c)
+			last = i;
+		i++;
+	}
+	if (c == '\0')
+		return (&s1[i]);
+	if (last != -1)
+		return (&s1[last]);
+	return (NULL);
 }
 
 // #include <stdio.h>
