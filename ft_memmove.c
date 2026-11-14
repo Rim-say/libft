@@ -31,8 +31,19 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			j--;
 		}
 		else
+		{
 			dest1[i] = src1[i];
-		i++;
+			i++;
+		}
 	}
 	return (dest);
+}
+
+#include <stdio.h>
+
+int main()
+{
+	char str[] = "abcdef";
+	ft_memmove(str + 1, str, 5);
+	printf("%s\n", str);
 }

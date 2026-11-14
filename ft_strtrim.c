@@ -27,20 +27,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
-	size_t	i;
 	char	*trimmed;
 
 	start = 0;
-	i = 0;
 	end = ft_strlen(s1);
 	while (start < end && is_set(s1[start], set))
 		start++;
-	while (end > start && is_set(s1[end], set))
+	while (end > start && is_set(s1[end - 1], set))
 		end--;
 	trimmed = malloc((end - start) * sizeof(char) + 1);
 	if (!trimmed)
 		return (NULL);
 	ft_strlcpy(trimmed, &s1[start], (end - start) + 1);
+	trimmed[end - start] = '\0';
 	return (trimmed);
 }
 

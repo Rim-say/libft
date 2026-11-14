@@ -23,24 +23,25 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	j = 0;
 	big1 = (char *)big;
 	little1 = (char *)little;
-	if (ft_strlen(little) > ft_strlen(big))
+	if (ft_strlen(little1) > ft_strlen(big1))
 		return (NULL);
 	if (little[i] == '\0')
 		return (big1);
 	while (i < len)
 	{
 		j = 0;
-		while (big[i + j] == little[j] && little[j])
+		while (big1[i] == little1[j] && little1[j])
 			j++;
-		if (j == ft_strlen(little))
+		if (j == ft_strlen(little1))
 			return (&big1[i]);
 		i++;
 	}
 	return (NULL);
 }
+
 // #include <stdio.h>
 
 // int main()
 // {
-// 	printf("%s", ft_strnstr("geeksforgeeks", "for", 6));
+// 	printf("%s", ft_strnstr("abc", "bc", 2));
 // }

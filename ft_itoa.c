@@ -27,17 +27,15 @@ static int	nbr_len(long nbr)
 		nbr /= 10;
 		len++;
 	}
-	return (len);
+	return (len + 1);
 }
 
 char	*ft_itoa(int n)
 {
 	int		len;
-	int		i;
 	long	nb;
 	char	*arr;
 
-	i = 0;
 	nb = (long)n;
 	len = nbr_len(nb);
 	arr = malloc(sizeof(char) * (len + 1));
@@ -56,9 +54,9 @@ char	*ft_itoa(int n)
 	}
 	return (arr);
 }
-// #include <stdio.h>
+#include <stdio.h>
 
-// int	main(void)
-// {
-// 	printf("%s", ft_itoa(3446781));
-// }
+int	main(void)
+{
+	printf("%s", ft_itoa(-2147483648));
+}
