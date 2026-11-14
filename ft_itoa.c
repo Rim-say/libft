@@ -6,7 +6,7 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 11:38:28 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/12 17:28:45 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/14 16:43:49 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@ static int	nbr_len(long nbr)
 	int	len;
 
 	len = 0;
-	if (nbr < 0)
+	if (nbr <= 0)
 	{
 		len++;
 		nbr = -nbr;
 	}
-	while (nbr >= 10)
+	while (nbr > 0)
 	{
 		nbr /= 10;
 		len++;
 	}
-	return (len + 1);
+	return (len);
 }
 
 char	*ft_itoa(int n)
@@ -47,16 +47,18 @@ char	*ft_itoa(int n)
 		arr[0] = '-';
 		nb = (-1) * nb;
 	}
+	if (n == 0)
+		arr[0] = '0';
 	while (nb > 0)
 	{
-		arr[len--] = (nb % 10) + '0';
-		nb = nb / 10;
+		arr[--len] = (nb % 10) + '0';
+		nb /= 10;
 	}
 	return (arr);
 }
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	printf("%s", ft_itoa(-2147483648));
-}
+// int	main(void)
+// {
+// 	printf("%s", ft_itoa(11));
+// }

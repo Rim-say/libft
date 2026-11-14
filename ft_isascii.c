@@ -6,11 +6,12 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 14:11:33 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/09 14:47:19 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/14 13:37:43 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_isascii(int c)
 {
 	if (!(c >= 0 && c <= 127))

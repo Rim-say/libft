@@ -6,7 +6,7 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 12:38:51 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/12 13:27:37 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/14 15:58:05 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*current;
 
+	if (lst == NULL)
+		return (NULL);
 	current = lst;
 	while (current->next != NULL)
 		current = current->next;

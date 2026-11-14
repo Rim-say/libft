@@ -6,7 +6,7 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 11:27:49 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/12 11:00:54 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/14 14:57:30 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*arr;
 
-	if (size != 0 && nmemb > SIZE_MAX / size)
+	if (nmemb == 0 || size == 0)
+		return (malloc(1));
+	if (size != 0 && nmemb > __SIZE_MAX__ / size)
 		return (NULL);
-	arr = malloc(nmemb * sizeof(size));
+	arr = malloc(nmemb * size);
 	if (!arr)
 		return (NULL);
-	ft_bzero(arr, nmemb * sizeof(size));
+	ft_bzero(arr, nmemb * size);
 	return (arr);
 }
 // #include <stdio.h>

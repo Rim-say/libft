@@ -6,7 +6,7 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 09:31:25 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/11 09:51:16 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/14 13:36:49 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	const unsigned char		*src1;
-	unsigned char			*dest1;
-	size_t					i;
-	size_t					j;
+	const unsigned char	*src1;
+	unsigned char		*dest1;
+	size_t				i;
+	size_t				j;
 
 	i = 0;
 	j = n;
@@ -39,11 +39,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-	char str[] = "abcdef";
-	ft_memmove(str + 1, str, 5);
-	printf("%s\n", str);
-}
+// int	main(void)
+// {
+// 	char str[] = "abcdef";
+// 	ft_memmove(str + 1, str, 5);
+// 	printf("%s\n", str);
+// }

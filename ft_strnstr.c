@@ -6,7 +6,7 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 10:01:45 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/11 10:47:18 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/14 14:45:35 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return (NULL);
 	if (little[i] == '\0')
 		return (big1);
-	while (i < len)
+	while (i < len && big1[i])
 	{
 		j = 0;
-		while (big1[i] == little1[j] && little1[j])
+		while (big1[i + j] == little1[j] && (i + j < len) && little1[j])
 			j++;
 		if (j == ft_strlen(little1))
 			return (&big1[i]);
@@ -41,7 +41,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 // #include <stdio.h>
 
-// int main()
+// int	main(void)
 // {
-// 	printf("%s", ft_strnstr("abc", "bc", 2));
+// 	printf("%s", ft_strnstr("abcdef", "def", 6));
 // }

@@ -6,7 +6,7 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 11:20:52 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/11 11:27:17 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/14 15:54:39 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	while ((*nptr >= 9 && *nptr <= 13) || *nptr == 32)
 		nptr++;
-	while (nptr[i] == '+' || nptr[i] == '-')
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
 		if (nptr[i] == '-')
 			sign = -sign;
