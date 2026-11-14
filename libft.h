@@ -6,7 +6,7 @@
 /*   By: ral-saye <ral-saye@student.42beirut.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 14:09:02 by ral-saye          #+#    #+#             */
-/*   Updated: 2026/11/14 14:03:48 by ral-saye         ###   ########.fr       */
+/*   Updated: 2026/11/14 16:53:15 by ral-saye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
-int 				ft_tolower(int c);
+int					ft_tolower(int c);
 int					ft_toupper(int c);
 
 #endif
